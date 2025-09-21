@@ -1,8 +1,8 @@
 # 🏁 My Variant – DartXtract (Concept Race)
 
-**Author:** Likhith Anand  
-**Course:** Product Development (IBE4, SS25), THWS  
-**Supervisor:** Prof. Dr. Thomas Felsner  
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/b24b1d0e-303c-4aef-97f6-76a114d7133d" alt="DartXtract Circuit" width="450"/>
+</p>
 
 ---
 
@@ -13,35 +13,83 @@
   - Safe handling (no injury, no dart tip damage).  
   - Accessible for wheelchair users.  
   - Budget < €200 (prototype level).  
-  - Compatible with steel-tip darts.  
+  - Compatible with steel-tip darts.
+
+The best path from the Morphological box 
+##  Subfunctions in My Variant (DartXtract)
+
+The chosen path from the Morphological box 
+
+| **Subfunction**             | **Chosen Solution in My Variant**           |
+|------------------------------|---------------------------------------------|
+| User Input Information       | Pressure-sensitive film (Velostat)          |
+| Process Input Information    | Arduino logic (3 hits trigger)             |
+| Extraction Mechanism         | Gravity Tilt Board                         |
+| Place Darts in Return Tray   | Electromagnet                              |
+| Prevent Bounce               | Rubber Brushings / Foam Damping            |
+| Return Darts                 | Gravity Chute                              |
+| Align Darts                  | Funnel-shaped loader guide                 |
+| Load Darts in Pick-Up Bay    | Slot-based foam tray                       |
+| Adjusting Height             | Inclined tray surface (30°–45° adjustable) |
+| User Feedback Information    | Piezo Buzzer                               |
+| Emergency Stop               | Mushroom Emergency Button                  |
 
 ---
 
 ## 2. Concept Overview (Mode of Operation)
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/439c39d8-53ce-451e-aa20-632afa30b2b1" alt="Subfunctions Table" width="450"/>
+</p>
+
 ### Detection & Trigger
 - **Sensor:** Velostat pressure-sensitive film mounted behind dartboard.  
 - **Logic:** Arduino Uno counts impacts, triggers retrieval after 3 darts.  
-- **Protection:** Foam ring prevents compression, maintains sensitivity.  
+- **Protection:** Foam ring prevents compression, maintains sensitivity.
+
+<p align="center">
+  <img width="660" height="348" alt="image" src="https://github.com/user-attachments/assets/d4b63c18-be3d-4d43-8ce5-024fcd08c982" />
+</p>
 
 ### Control Logic
 - Arduino processes sensor signal → triggers tilt, electromagnet, buzzer.  
-- Outputs: Servo motor (tilt), Electromagnet (assist), Piezo buzzer (feedback).  
+- Outputs: Servo motor (tilt), Electromagnet (assist), Piezo buzzer (feedback).
+
+<p align="center">
+  <img width="567" height="618" alt="image" src="https://github.com/user-attachments/assets/27379911-8c2a-458e-8aad-ea6df15fbb67" />
+ </p>
 
 ### Extraction Mechanism
 - **Tilting Board:** Servo/gear motor tilts dartboard 90° → gravity releases darts.  
 - **Electromagnet:** Mounted at 90° to board → 2s pulse → loosens stuck darts.  
 
+<p align="center">
+<img width="389" height="479" alt="image" src="https://github.com/user-attachments/assets/70dd394b-af7f-494a-9579-730af812536b" />
+ </p>
+
+<p align="center">
+  <img width="508" height="259" alt="image" src="https://github.com/user-attachments/assets/7850f650-0b0b-4821-9daa-1d7e250f2ec7" />
+ </p>
+
 ### Return System
 - Darts slide onto **angled ramp** → pass through **funnel guider** → collected in **slot-based foam tray**.  
 - Foam padding at impact zones prevents bounce, noise, and damage.  
-- Tray slots hold darts individually for safety and ergonomics.  
+- Tray slots hold darts individually for safety and ergonomics.
+
+<p align="center">
+  <img width="612" height="649" alt="image" src="https://github.com/user-attachments/assets/2de4b0b7-5dab-4199-98e5-1f6e210969a9" />
+  <img width="419" height="333" alt="image" src="https://github.com/user-attachments/assets/3e587e3f-08b0-407c-95b3-8d293faca4e8" />
+  <img width="458" height="620" alt="image" src="https://github.com/user-attachments/assets/9c1a9339-3ad9-476c-919e-cf68ae901a31" />
+ </p>
 
 ### Additional Features
 - Adjustable ramp height/angle.  
 - Audio feedback via buzzer.  
-- Emergency stop (mushroom button) halts system instantly.  
+- Emergency stop (mushroom button) halts system instantly.
 
+ <p align="center">
+   <img width="499" height="412" alt="image" src="https://github.com/user-attachments/assets/eaa4d469-d190-4ec9-ad81-a545d5503031" />
+ </p>
 ---
 
 ## 3. Advantages & Disadvantages

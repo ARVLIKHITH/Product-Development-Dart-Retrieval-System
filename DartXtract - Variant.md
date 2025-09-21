@@ -39,7 +39,7 @@ The chosen path from the Morphological box
 ## 2. Concept Overview (Mode of Operation)
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/439c39d8-53ce-451e-aa20-632afa30b2b1" alt="Subfunctions Table" width="450"/>
+  <img src="https://github.com/user-attachments/assets/439c39d8-53ce-451e-aa20-632afa30b2b1" alt="Subfunctions Table" width="500"/>
 </p>
 
 ### Detection & Trigger
@@ -48,7 +48,7 @@ The chosen path from the Morphological box
 - **Protection:** Foam ring prevents compression, maintains sensitivity.
 
 <p align="center">
-  <img width="660" height="348" alt="image" src="https://github.com/user-attachments/assets/d4b63c18-be3d-4d43-8ce5-024fcd08c982" />
+  <img width="500" height="348" alt="image" src="https://github.com/user-attachments/assets/d4b63c18-be3d-4d43-8ce5-024fcd08c982" />
 </p>
 
 ### Control Logic
@@ -56,7 +56,7 @@ The chosen path from the Morphological box
 - Outputs: Servo motor (tilt), Electromagnet (assist), Piezo buzzer (feedback).
 
 <p align="center">
-  <img width="567" height="618" alt="image" src="https://github.com/user-attachments/assets/27379911-8c2a-458e-8aad-ea6df15fbb67" />
+  <img width="500" height="618" alt="image" src="https://github.com/user-attachments/assets/27379911-8c2a-458e-8aad-ea6df15fbb67" />
  </p>
 
 ### Extraction Mechanism
@@ -64,7 +64,7 @@ The chosen path from the Morphological box
 - **Electromagnet:** Mounted at 90° to board → 2s pulse → loosens stuck darts.  
 
 <p align="center">
-<img width="389" height="479" alt="image" src="https://github.com/user-attachments/assets/70dd394b-af7f-494a-9579-730af812536b" />
+<img width="500" height="479" alt="image" src="https://github.com/user-attachments/assets/70dd394b-af7f-494a-9579-730af812536b" />
  </p>
 
 <p align="center">
@@ -77,9 +77,13 @@ The chosen path from the Morphological box
 - Tray slots hold darts individually for safety and ergonomics.
 
 <p align="center">
-  <img width="612" height="649" alt="image" src="https://github.com/user-attachments/assets/2de4b0b7-5dab-4199-98e5-1f6e210969a9" />
-  <img width="419" height="333" alt="image" src="https://github.com/user-attachments/assets/3e587e3f-08b0-407c-95b3-8d293faca4e8" />
-  <img width="458" height="620" alt="image" src="https://github.com/user-attachments/assets/9c1a9339-3ad9-476c-919e-cf68ae901a31" />
+  <img width="400" height="649" alt="image" src="https://github.com/user-attachments/assets/2de4b0b7-5dab-4199-98e5-1f6e210969a9" />
+   </p>
+   <p align="center">
+  <img width="400" height="333" alt="image" src="https://github.com/user-attachments/assets/3e587e3f-08b0-407c-95b3-8d293faca4e8" />
+    </p>
+   <p align="center"> 
+  <img width="400" height="620" alt="image" src="https://github.com/user-attachments/assets/9c1a9339-3ad9-476c-919e-cf68ae901a31" />
  </p>
 
 ### Additional Features
@@ -154,6 +158,13 @@ Slightly over €200 budget, but feasible and optimizable.
 - Sensor reliability (Velostat wear over time)  
 
 ---
+## Technical Drawings
+<p align="center">
+<img width="600" height="634" alt="image" src="https://github.com/user-attachments/assets/83f43da7-d142-47cc-97be-286ca036383c" />
+<img width="600" height="581" alt="image" src="https://github.com/user-attachments/assets/2919b94d-5275-4d25-b8fe-844c76a6e55c" />
+</p>
+---
+
 ## 7. Electronics & Control
 
 ### 7.1 Tinkercad Circuit Diagram
@@ -167,7 +178,10 @@ It includes:
 - Emergency stop (safety cutoff)
 
 <p align="center">
-  <img src="../images/tinkercad_circuit.png" alt="Tinkercad Circuit Diagram" width="500"/>
+<img width="1000" height="1396" alt="Screenshot 2025-09-21 184115" src="https://github.com/user-attachments/assets/50b925b2-3c2f-4d0b-9023-7e0897db760d" 
+</p>
+<p align="center">
+<img width="1000" height="1610" alt="Screenshot 2025-09-21 184137" src="https://github.com/user-attachments/assets/20591755-46da-4448-9069-de2b757516d9" />
 </p>
 
 ---
@@ -183,12 +197,6 @@ You can view the complete code here:
 ### 7.3 Simulation Video
 The working simulation was tested in **Tinkercad Circuits**.  
 The video below demonstrates the retrieval cycle in action (sensor trigger → tilt → magnet → feedback).  
-
-<p align="center">
-  <a href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID">
-    <img src="https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg" alt="DartXtract Simulation Video" width="500"/>
-  </a>
-</p>
 
 *Click image to watch the full simulation on YouTube.*
 

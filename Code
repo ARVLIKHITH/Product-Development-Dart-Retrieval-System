@@ -1,0 +1,76 @@
+#include <Servo.h> 
+// Pin definitions 
+const int fsrPin = A0; 
+const int buzzerPin = 8; 
+const int servoPin = 9; 
+const int buttonPin = 2; 
+int fsrCount = 0; 
+bool doOnce = true; 
+bool countOnce = true; 
+float oldFSR = 0; 
+const int fsrThreshold = 200; 
+Servo dartServo; 
+313 
+bool emergencyTriggered = false; 
+void setup() { 
+pinMode(buzzerPin, OUTPUT); 
+pinMode(buttonPin, INPUT_PULLUP); 
+digitalWrite(buzzerPin, LOW); 
+dartServo.attach(servoPin); 
+dartServo.write(0); 
+Serial.begin(9600); 
+} 
+void loop() { 
+checkEmergency(); 
+if (emergencyTriggered) return; 
+int fsrValue = analogRead(fsrPin); 
+if (fsrValue > oldFSR) 
+{ 
+if (countOnce) 
+{ 
+fsrCount ++; 
+countOnce = false; 
+Serial.print(fsrCount); 
+delay (300); 
+oldFSR = fsrValue; 
+} 
+314 
+} 
+else 
+{ 
+countOnce = true; 
+} 
+if (fsrCount > 2 && doOnce) { 
+doOnce = false; 
+dartServo.write(90); 
+activateBuzzer(3); 
+delay (3000); 
+dartServo.write(0); 
+delay(1000); 
+digitalWrite(buzzerPin, LOW); 
+} 
+oldFSR = fsrValue; 
+} 
+// Buzzer with emergency monitoring 
+void activateBuzzer(unsigned long duration) { 
+unsigned long startTime = millis(); 
+digitalWrite(buzzerPin, HIGH); 
+while (millis() - startTime < duration) { 
+315 
+checkEmergency(); 
+if (emergencyTriggered) { 
+digitalWrite(buzzerPin, LOW); 
+return; 
+} 
+} 
+} 
+// Constantly check the button 
+void checkEmergency() { 
+if (digitalRead(buttonPin) == LOW) { 
+Serial.println("    
+Emergency stop triggered!"); 
+emergencyTriggered = true; 
+dartServo.write(90); 
+digitalWrite(buzzerPin, LOW); 
+} 
+} 

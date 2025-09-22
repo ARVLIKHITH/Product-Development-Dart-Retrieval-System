@@ -103,13 +103,7 @@ This step prevents “random designing” and ensures the final product is optim
   - **Ergonomics:** Usable without changing stance, wheelchair accessible (tray/button height 60–120 cm), noise level ≤ 50 dB.  
   - **Production:** Designed for small-batch manufacturing (300–500 units/year).  
   - **Costs:** Max production cost ≤ €200.  
-- **Deliverables:** Submitted my **research document** and **LoR**, which were merged into the team’s consolidated requirement list and used as the foundation for design.  
-
-📄 **Files:**  
-- [Extensive Technical Research (PDF)](../docs/Extensive_Research.pdf)  
-- [List of Requirements (PDF)](../docs/LOR.pdf)
-
----
+- **Deliverables:** Submitted my **research document** and **LoR**, which were merged into the team’s consolidated requirement list and used as the foundation for design.---
 ### Step 3: Design Methodology (Black Box, Subfunctions, Morphological Box)
 
 #### What is this step?

@@ -230,3 +230,12 @@ The **DartXtract** variant demonstrates a **structured, feasible, and safe** dar
 This variant contributed core elements (magnetic assist + funnel return + safety systems) that were later integrated into the **optimised team solution**.
 
 ---
+
+## 📜 License
+Copyright (c) 2025 **Likhith Anand**.  
+All rights reserved.  
+
+This project is provided for **viewing only**.  
+No permission is granted to copy, modify, or redistribute any part of this repository without explicit written consent from the author.  
+
+![License: All Rights Reserved](https://img.shields.io/badge/License-All%20Rights%20Reserved-red.svg)

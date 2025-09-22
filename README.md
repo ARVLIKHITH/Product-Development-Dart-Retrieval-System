@@ -71,6 +71,7 @@ Below is the process we applied, with my **individual contributions** highlighte
 - Defined milestones and weekly Quality Gates (QG01–QG06).
     
 ---
+
 **My Contribution:** Created the **Gantt Chart** (10-week project timeline with milestones and supervised meetings).
 
 - **Gantt Chart Design** – Created from scratch in **ProjectLibre**.  
@@ -116,6 +117,9 @@ This step prevents “random designing” and ensures the final product is optim
   - **Production:** Designed for small-batch manufacturing (300–500 units/year).  
   - **Costs:** Max production cost ≤ €200.  
 - **Deliverables:** Submitted my **research document** and **LoR**, which were merged into the team’s consolidated requirement list and used as the foundation for design.---
+
+---
+
 ### Step 3: Design Methodology (Black Box, Subfunctions, Morphological Box)
 
 #### What is this step?
@@ -171,6 +175,7 @@ In the product development methodology, after task clarification and LoR, the sy
   - This MB was the foundation for the **Concept Race**, where each member created an individual variant.
 
 ---
+
 **File:** [Active Principles & Morphological Box (PDF)]
 
 ---
@@ -239,6 +244,7 @@ In the product development methodology, once multiple concepts (variants) are ge
 <p align="center">
   <img src="https://github.com/user-attachments/assets/0634574b-b038-49e5-971a-24db24cb6488" alt="Screenshot" width="450"/>
 </p>
+
 ---
 
 ### Step 6: Additional Work Packages

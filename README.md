@@ -17,6 +17,18 @@ The mission:
 
 ---
 
+## Project Demo (Video)
+
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=b0rMb7xxSCo">
+    <img src="https://img.youtube.com/vi/b0rMb7xxSCo/0.jpg" alt="Dart Retrieval System Demo" width="600">
+  </a>
+</p>
+
+<p align="center"><em>Credits: Blender animation by Prithvi, based on our team’s final prototype design.</em></p>
+
+---
+
 ## Project Story
 
 - At the start, we were provided with strict **guidelines and a scriptum** outlining the entire development process.  
@@ -238,15 +250,6 @@ In the product development methodology, once multiple concepts (variants) are ge
 - **My Contribution:** Wrote the **Product Description** for the optimised solution, including structure, function, technical data, and maintenance guidelines.
 
 ---
-## Project Demo (Video)
-
-<p align="center">
-  <a href="https://www.youtube.com/watch?v=b0rMb7xxSCo">
-    <img src="https://img.youtube.com/vi/b0rMb7xxSCo/0.jpg" alt="Dart Retrieval System Demo" width="600">
-  </a>
-</p>
-
-<p align="center"><em>Credits: Blender animation by Prithvi, based on our team’s final prototype design.</em></p>
 
 5. **Prototype & Documentation**  
    - Built physical prototype with extraction, return, and safety features.  

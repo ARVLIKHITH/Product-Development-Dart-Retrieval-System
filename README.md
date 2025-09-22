@@ -189,7 +189,7 @@ In the product development methodology, after task clarification and LoR, the sy
   - Technical/economic evaluation (paired comparison, strength diagrams).  
 - **My Contribution:**  
   - Designed my **own variant** — combining a **sudden fall mechanism** with a **magnetic backup plate**, plus funnel and chute return.  
-  - This was my **highlight contribution**, and I have documented it separately in [`/concept_race`](./concept_race/README.md).
+  - This was my **highlight contribution**, and I have documented it separately.
 
 
 #### What is this step?

@@ -132,6 +132,7 @@ In the product development methodology, after task clarification and LoR, the sy
 ---
 
 #### My Contributions
+
 - **Black Box Development:**  
   - Contributed to defining the system’s Black Box for both *dart retrieval* and *dart return*.  
   - Identified **inputs** (material = darts, signal = button press, energy = electric/mechanical), **outputs** (darts in tray, audio/visual feedback), **internal disturbances** (misalignment, jamming, vibrations), and **external disturbances** (power fluctuations, dust, temperature, pets).  
@@ -219,7 +220,10 @@ In the product development methodology, once multiple concepts (variants) are ge
     - My variant (DartXtract) → 54.7% fulfilment.  
       
   - **Economic Criteria Ranking:**  
-    - My variant (DartXtract) → 51.6%.  
+    - My variant (DartXtract) → 51.6%.
+
+📄 [My Variant – DartXtract](./DartXtract%20-%20Variant.md)
+
 ---
 
 **Visual Deliverables:** 

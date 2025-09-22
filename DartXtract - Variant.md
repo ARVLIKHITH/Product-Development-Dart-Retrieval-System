@@ -15,7 +15,26 @@
   - Budget < €200 (prototype level).  
   - Compatible with steel-tip darts.
 
-The best path from the Morphological box 
+## 🎥 Project Demo Videos
+
+### Prototype Demo (Final Optimized Solution)
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=XfCU9qc8eJU">
+    <img src="https://img.youtube.com/vi/XfCU9qc8eJU/0.jpg" alt="Prototype Demo Video" width="600">
+  </a>
+</p>
+<p align="center"><em>Watch the final prototype of the Dart Retrieval System in action.</em></p>
+
+---
+
+### Concept Simulation Demo
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=Dweflsoa8-w">
+    <img src="https://img.youtube.com/vi/Dweflsoa8-w/0.jpg" alt="Simulation Demo Video" width="600">
+  </a>
+</p>
+<p align="center"><em>Watch the working simulation of the Dart Retrieval System (Concept Phase).</em></p>
+
 ##  Subfunctions in My Variant (DartXtract)
 
 The chosen path from the Morphological box 
@@ -190,7 +209,7 @@ It includes:
 The Arduino code handles sensor input, motor control, magnet activation, and feedback.  
 You can view the complete code here:  
 
-📄 [Arduino Code (DartXtract)](../code/dartxtract.ino)
+[Arduino Code (DartXtract)](../code/dartxtract.ino)
 
 ---
 

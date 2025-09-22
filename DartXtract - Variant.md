@@ -17,7 +17,7 @@
 
 ## 🎥 Project Demo Videos
 
-### Prototype Demo (Final Optimized Solution)
+### Prototype Demo (Final Optimised Solution)
 <p align="center">
   <a href="https://www.youtube.com/watch?v=XfCU9qc8eJU">
     <img src="https://img.youtube.com/vi/XfCU9qc8eJU/0.jpg" alt="Prototype Demo Video" width="600">
@@ -34,6 +34,8 @@
   </a>
 </p>
 <p align="center"><em>Watch the working simulation of the Dart Retrieval System (Concept Phase).</em></p>
+
+---
 
 ##  Subfunctions in My Variant (DartXtract)
 
@@ -61,9 +63,11 @@ The chosen path from the Morphological box
   <img src="https://github.com/user-attachments/assets/439c39d8-53ce-451e-aa20-632afa30b2b1" alt="Subfunctions Table" width="500"/>
 </p>
 
+---
+
 ### Detection & Trigger
-- **Sensor:** Velostat pressure-sensitive film mounted behind dartboard.  
-- **Logic:** Arduino Uno counts impacts, triggers retrieval after 3 darts.  
+- **Sensor:** Velostat pressure-sensitive film mounted behind the dartboard.  
+- **Logic:** Arduino Uno counts impacts, triggers retrieval after three darts.  
 - **Protection:** Foam ring prevents compression, maintains sensitivity.
 
 <p align="center">
@@ -108,11 +112,12 @@ The chosen path from the Morphological box
 ### Additional Features
 - Adjustable ramp height/angle.  
 - Audio feedback via buzzer.  
-- Emergency stop (mushroom button) halts system instantly.
+- Emergency stop (mushroom button) halts the system instantly.
 
  <p align="center">
    <img width="499" height="412" alt="image" src="https://github.com/user-attachments/assets/eaa4d469-d190-4ec9-ad81-a545d5503031" />
  </p>
+
 ---
 
 ## 3. Advantages & Disadvantages
@@ -128,7 +133,7 @@ The chosen path from the Morphological box
 - Magnet reliance → may not work with non-metal darts.  
 - Ramp angle needs precise calibration.  
 - Sensor reliability depends on foam wear/calibration.  
-- Slightly complex mechanical synchronization.  
+- Slightly complex mechanical synchronisation.  
 
 ---
 
@@ -177,11 +182,13 @@ Slightly over €200 budget, but feasible and optimizable.
 - Sensor reliability (Velostat wear over time)  
 
 ---
+
 ## Technical Drawings
 <p align="center">
 <img width="600" height="634" alt="image" src="https://github.com/user-attachments/assets/83f43da7-d142-47cc-97be-286ca036383c" />
 <img width="600" height="581" alt="image" src="https://github.com/user-attachments/assets/2919b94d-5275-4d25-b8fe-844c76a6e55c" />
 </p>
+
 ---
 
 ## 7. Electronics & Control
@@ -209,16 +216,9 @@ It includes:
 The Arduino code handles sensor input, motor control, magnet activation, and feedback.  
 You can view the complete code here:  
 
-[Arduino Code (DartXtract)](../code/dartxtract.ino)
+📄 [Arduino Code (DartXtract)](./Code/dartxtract.ino)
 
 ---
-
-### 7.3 Simulation Video
-The working simulation was tested in **Tinkercad Circuits**.  
-The video below demonstrates the retrieval cycle in action (sensor trigger → tilt → magnet → feedback).  
-
-*Click image to watch the full simulation on YouTube.*
-
 
 ## 8. Conclusion
 The **DartXtract** variant demonstrates a **structured, feasible, and safe** dart retrieval system.  
@@ -227,6 +227,6 @@ The **DartXtract** variant demonstrates a **structured, feasible, and safe** dar
 - Built from affordable, widely available components.  
 - Minor refinements (sensor robustness, foam durability, magnet alternatives) would improve real-world reliability.  
 
-This variant contributed core elements (magnetic assist + funnel return + safety systems) that were later integrated into the **optimized team solution**.
+This variant contributed core elements (magnetic assist + funnel return + safety systems) that were later integrated into the **optimised team solution**.
 
 ---

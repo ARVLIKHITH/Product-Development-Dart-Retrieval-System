@@ -281,4 +281,14 @@ In the product development methodology, once multiple concepts (variants) are ge
 - **Likhith Anand** – Project scheduling (Gantt), Extensive research, LoR, Active Principles, Subfunctions, Morphological Box, Brainstorm Techniques, concept race variant, optimised solution description, product description.  
 
 ---
+---
+
+## 📜 License
+Copyright (c) 2025 **Likhith Anand**.  
+All rights reserved.  
+
+This project is provided for **viewing only**.  
+No permission is granted to copy, modify, or redistribute any part of this repository without explicit written consent from the author.  
+
+![License: All Rights Reserved](https://img.shields.io/badge/License-All%20Rights%20Reserved-red.svg)
 

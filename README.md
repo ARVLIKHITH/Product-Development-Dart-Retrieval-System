@@ -256,7 +256,8 @@ In the product development methodology, once multiple concepts (variants) are ge
   - **Set-up structure** (modules, assemblies, parts).  
   - **FMEA** (failure mode and effects analysis).  
   - **Product Description (manual-style)** — description, setup, function, technical data, maintenance.  
-  - Prototype model for demonstration.   
+  - Prototype model for demonstration.
+---
 <div align="center">
 
   <h2>User Manual</h2>
@@ -264,7 +265,7 @@ In the product development methodology, once multiple concepts (variants) are ge
   [📖 Open the User Manual](USER%20MANUAL%20.pdf)
 
 </div>
-
+---
 - **My Contribution:** Wrote the **Product Description** for the optimised solution, including structure, function, technical data, and maintenance guidelines.
 
 ---
@@ -272,14 +273,6 @@ In the product development methodology, once multiple concepts (variants) are ge
 5. **Prototype & Documentation**  
    - Built physical prototype with extraction, return, and safety features.  
    - Authored **Product Description (manual-style)** covering setup, function, technical data, and maintenance.
-<div align="center">
-
-  <h2>User Manual</h2>
-
-  [📖 Open the User Manual](USER%20MANUAL%20.pdf)
-
-</div>
-
    - Delivered final presentation and project folder.
 ---
  <div align="center">

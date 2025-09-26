@@ -216,7 +216,9 @@ It includes:
 The Arduino code handles sensor input, motor control, magnet activation, and feedback.  
 You can view the complete code here:  
 
-📄 [Arduino Code (DartXtract)](./Code/dartxtract.ino)
+  <a href="Code/">🧩 Open the Code folder</a>
+
+</div>
 
 ---
 

@@ -1,76 +1,117 @@
-#include <Servo.h> 
-// Pin definitions 
-const int fsrPin = A0; 
-const int buzzerPin = 8; 
-const int servoPin = 9; 
-const int buttonPin = 2; 
-int fsrCount = 0; 
-bool doOnce = true; 
-bool countOnce = true; 
-float oldFSR = 0; 
-const int fsrThreshold = 200; 
-Servo dartServo; 
-313 
-bool emergencyTriggered = false; 
-void setup() { 
-pinMode(buzzerPin, OUTPUT); 
-pinMode(buttonPin, INPUT_PULLUP); 
-digitalWrite(buzzerPin, LOW); 
-dartServo.attach(servoPin); 
-dartServo.write(0); 
-Serial.begin(9600); 
-} 
-void loop() { 
-checkEmergency(); 
-if (emergencyTriggered) return; 
-int fsrValue = analogRead(fsrPin); 
-if (fsrValue > oldFSR) 
-{ 
-if (countOnce) 
-{ 
-fsrCount ++; 
-countOnce = false; 
-Serial.print(fsrCount); 
-delay (300); 
-oldFSR = fsrValue; 
-} 
-314 
-} 
-else 
-{ 
-countOnce = true; 
-} 
-if (fsrCount > 2 && doOnce) { 
-doOnce = false; 
-dartServo.write(90); 
-activateBuzzer(3); 
-delay (3000); 
-dartServo.write(0); 
-delay(1000); 
-digitalWrite(buzzerPin, LOW); 
-} 
-oldFSR = fsrValue; 
-} 
-// Buzzer with emergency monitoring 
-void activateBuzzer(unsigned long duration) { 
-unsigned long startTime = millis(); 
-digitalWrite(buzzerPin, HIGH); 
-while (millis() - startTime < duration) { 
-315 
-checkEmergency(); 
-if (emergencyTriggered) { 
-digitalWrite(buzzerPin, LOW); 
-return; 
-} 
-} 
-} 
-// Constantly check the button 
-void checkEmergency() { 
-if (digitalRead(buttonPin) == LOW) { 
-Serial.println("    
-Emergency stop triggered!"); 
-emergencyTriggered = true; 
-dartServo.write(90); 
-digitalWrite(buzzerPin, LOW); 
-} 
-} 
+#include <Servo.h>
+
+// --- Pins ---
+const int PIN_FSR    = A0;
+const int PIN_BUZZER = 8;
+const int PIN_SERVO  = 9;
+const int PIN_BTN    = 2;   // active LOW (pull-up)
+
+// --- Config ---
+const int  FSR_THRESHOLD     = 200;   // analog units
+const int  FSR_HYSTERESIS    = 15;    // ignore tiny changes
+const int  DARTS_TO_TRIGGER  = 3;
+
+const int  SERVO_OPEN_ANGLE  = 90;
+const int  SERVO_CLOSE_ANGLE = 0;
+const unsigned long SERVO_OPEN_TIME_MS = 3000;  // hold open
+const unsigned long BUZZ_TIME_MS       = 300;   // beep length
+const unsigned long FSR_COOLDOWN_MS    = 250;   // gap between counts
+
+// --- State ---
+Servo servoDrive;
+int   fsrCount        = 0;
+int   lastFsr         = 0;
+bool  emergency       = false;
+bool  cycleRunning    = false;
+unsigned long lastFsrTickMs = 0;
+
+void setup() {
+  pinMode(PIN_BUZZER, OUTPUT);
+  pinMode(PIN_BTN, INPUT_PULLUP);
+  digitalWrite(PIN_BUZZER, LOW);
+
+  servoDrive.attach(PIN_SERVO);
+  servoDrive.write(SERVO_CLOSE_ANGLE);
+
+  // Serial.begin(9600); // uncomment if you want logs
+}
+
+void loop() {
+  if (digitalRead(PIN_BTN) == LOW) {
+    emergencyStop();
+    return;
+  }
+
+  if (!cycleRunning) {
+    countFsrEvents();
+    if (fsrCount >= DARTS_TO_TRIGGER) runCycle();
+  }
+}
+
+// --- Helpers ---
+void countFsrEvents() {
+  const int fsr = analogRead(PIN_FSR);
+  const unsigned long now = millis();
+
+  // rising change above noise & threshold, with cooldown
+  if (fsr > FSR_THRESHOLD &&
+      (fsr - lastFsr) > FSR_HYSTERESIS &&
+      (now - lastFsrTickMs) > FSR_COOLDOWN_MS) {
+    fsrCount++;
+    lastFsrTickMs = now;
+    // Serial.println(fsrCount);
+  }
+  lastFsr = fsr;
+}
+
+void runCycle() {
+  cycleRunning = true;
+
+  // open
+  servoDrive.write(SERVO_OPEN_ANGLE);
+  buzz(BUZZ_TIME_MS);
+  if (waitWithEmergency(SERVO_OPEN_TIME_MS)) return;
+
+  // close
+  servoDrive.write(SERVO_CLOSE_ANGLE);
+  buzz(0); // ensure off
+
+  // reset for next round
+  fsrCount = 0;
+  lastFsr  = 0;
+  cycleRunning = false;
+}
+
+void buzz(unsigned long durationMs) {
+  if (durationMs == 0) {
+    digitalWrite(PIN_BUZZER, LOW);
+    return;
+  }
+  const unsigned long start = millis();
+  digitalWrite(PIN_BUZZER, HIGH);
+  while (millis() - start < durationMs) {
+    if (digitalRead(PIN_BTN) == LOW) { // emergency while buzzing
+      digitalWrite(PIN_BUZZER, LOW);
+      emergencyStop();
+      return;
+    }
+  }
+  digitalWrite(PIN_BUZZER, LOW);
+}
+
+bool waitWithEmergency(unsigned long durationMs) {
+  const unsigned long start = millis();
+  while (millis() - start < durationMs) {
+    if (digitalRead(PIN_BTN) == LOW) { // emergency during wait
+      emergencyStop();
+      return true;
+    }
+  }
+  return false;
+}
+
+void emergencyStop() {
+  emergency = true;
+  servoDrive.write(SERVO_OPEN_ANGLE); // safe position; change if needed
+  digitalWrite(PIN_BUZZER, LOW);
+}

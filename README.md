@@ -256,15 +256,26 @@ In the product development methodology, once multiple concepts (variants) are ge
   - **Set-up structure** (modules, assemblies, parts).  
   - **FMEA** (failure mode and effects analysis).  
   - **Product Description (manual-style)** — description, setup, function, technical data, maintenance.  
-  - Prototype model for demonstration.  
+  - Prototype model for demonstration.   
+  [📖 Open the User Manual](USER%20MANUAL.pdf)
 - **My Contribution:** Wrote the **Product Description** for the optimised solution, including structure, function, technical data, and maintenance guidelines.
 
 ---
 
 5. **Prototype & Documentation**  
    - Built physical prototype with extraction, return, and safety features.  
-   - Authored **Product Description (manual-style)** covering setup, function, technical data, and maintenance.  
-   - Delivered final presentation and project folder.  
+   - Authored **Product Description (manual-style)** covering setup, function, technical data, and maintenance.
+[📖 Open the User Manual](USER%20MANUAL.pdf) 
+   - Delivered final presentation and project folder.
+---
+ <div align="center">
+ <h2>Working Prototype</h2>
+  <!-- Clickable thumbnail that opens the YouTube Short -->
+  <a href="https://www.youtube.com/shorts/was9DbXNtk8" target="_blank">
+    <img src="https://img.youtube.com/vi/was9DbXNtk8/hqdefault.jpg" alt="Working Prototype – YouTube Short" />
+  </a>
+</div>
+
 
 ---
 
